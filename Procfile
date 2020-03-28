@@ -1,1 +1,1 @@
-web: gunicorn bot:app
+web: gunicorn -b 5000 bot:app

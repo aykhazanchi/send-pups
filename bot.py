@@ -31,3 +31,7 @@ def bot():
     if not responded:
         msg.body("Sorry, I only know about intellectual pups. Please say \"send pup\" if you'd like an intellectual pupper to appear")
     return str(resp)
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
