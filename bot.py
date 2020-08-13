@@ -16,7 +16,7 @@ def bot():
         r = requests.get('https://api.quotable.io/random')
         if r.status_code == 200:
             data = r.json()
-            quote = f'{data["content"]} \n- {data["author"]}, as told to the pup'
+            quote = f'{data["content"]} \n- {data["author"]}, the pup'
         else:
             quote: 'I could not retrieve a quote at this time'
         msg.body(quote)
@@ -29,5 +29,6 @@ def bot():
         responded = True
 
     if not responded:
-        msg.body("Sorry, I only know about intellectual pups. Please say \"send pup\" if you'd like an intellectual pupper to appear")
+        response = f'Sorry, I am unable to {incoming_msg} right now. Please type "send pup" if you\'d like an intellectual pupper to appear'
+        msg.body(response)
     return str(resp)
