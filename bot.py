@@ -29,6 +29,6 @@ def bot():
         responded = True
 
     if not responded:
-        response = f'Sorry, I am unable to {incoming_msg} right now. Please type "send pup" if you\'d like an intellectual pupper to appear'
+        response = f'Sorry, I am unable to "{incoming_msg}" right now. Please type "send pup" if you\'d like an intellectual pupper to appear'
         msg.body(response)
     return str(resp)
